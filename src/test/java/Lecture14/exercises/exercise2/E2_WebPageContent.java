@@ -22,15 +22,13 @@ public class E2_WebPageContent {
         softAssert.assertEquals(pageTitleActual, pageTitleExpected, "Failure: The actual page title does not match the expected page title.");
 
         // testing the header
-        softAssert.assertEquals(headerActual, headerExpected, "Failure: The actual page title does not match the expected page title.");
+        softAssert.assertEquals(headerActual, headerExpected, "Failure: The actual header does not match the expected header.");
 
         // testing the footer
-        softAssert.assertEquals(footerActual, footerExpected, "Failure: The actual page title does not match the expected page title." );
+        softAssert.assertEquals(footerActual, footerExpected, "Failure: The actual footer does not match the expected footer.");
 
         System.out.println("The verification of the web elements is now complete.");
 
         softAssert.assertAll();
     }
-
-
 }
