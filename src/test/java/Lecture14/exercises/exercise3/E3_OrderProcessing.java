@@ -24,14 +24,14 @@ public class E3_OrderProcessing {
     }
 
 
-    // the test method now take use parameters supplied by the data provider method
+    // This test ensures that order statuses change as expected based on sample test cases from the data provider
     @Test(dataProvider = "testDataStatuses")
     public void testOrderStatusUpdate(String actual, String expected) {
         Assert.assertEquals(actual, expected,
                 "Failure: the actual status does not match the expected status.");
     }
 
-    // the test method now take use parameters supplied by the data provider method
+    // This test checks that the total price calculation works correctly with sample input values from the data provider
     @Test(dataProvider = "testDataPriceCalculations")
     public void testOrderTotalPriceCalculation(int actualTotalSum, int expectedTotalSum) {
         Assert.assertEquals(actualTotalSum, expectedTotalSum,
