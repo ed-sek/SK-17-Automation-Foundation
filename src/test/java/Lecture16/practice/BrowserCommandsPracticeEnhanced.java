@@ -120,4 +120,31 @@ public class BrowserCommandsPracticeEnhanced {
          * WebElement inputField = wait.until(ExpectedConditions.elementToBeClickable(By.id("search-input")));
          */
     }
+
+    @Test
+    public void testGettingElementText() throws InterruptedException {
+        // Start of reusable code block for
+        // setting the browser and maximizing the window
+        WebDriverManager.chromedriver().setup();
+        ChromeDriver webDriver = new ChromeDriver();
+        webDriver.manage().window().maximize();
+        // End of reusable code block
+
+        webDriver.get("https://www.nba.com/");
+
+        Thread.sleep(3000);
+
+        // Finding the tracking popup's Accept button and clicking to agree
+        WebElement trackingButtonAccept = webDriver.findElement(By.xpath("//button[text()='I Accept']"));
+        trackingButtonAccept.click();
+
+        WebElement leaguePassButton = webDriver.findElement(By.xpath("//span[text()='League Pass']"));
+        System.out.println(leaguePassButton.getText());
+
+        Thread.sleep(3000);
+
+        if (webDriver != null) {
+            webDriver.quit();
+        }
+    }
 }
