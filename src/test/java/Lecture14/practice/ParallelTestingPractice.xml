@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Parallel Test Suite [Lecture14] self-practice" parallel="classes" thread-count="3">
+    <test name="Test1">
+        <classes>
+            <class name="Lecture14.practice.AnnotationsPractice"/>
+            <class name="Lecture14.exercises.exercise1.E1_OrderProcessing"/>
+            <class name="Lecture14.exercises.exercise2.E2_WebPageContent"/>
+        </classes>
+    </test>
+</suite>
